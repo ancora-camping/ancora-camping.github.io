@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Ancora</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/021c379d0c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <script src="scripts/main.js"></script>
+</head>
+
+<body x-data="{ showBar: false }">
+    <nav style="position: fixed;" class="w-full top-0 z-[100] transition-all duration-200"
+        :class="showBar ? 'bg-white h-20 shadow-lg' : 'bg-transparent h-28'"
+        @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
+        <div class="narrow-container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img x-show="!showBar" class="h-12" src="img/logo_white.png" alt="">
+                <img x-show="showBar" class="h-12" src="img/logo.png" alt="">
+                <span class="ml-3 text-2xl hover:cursor-pointer transition-colors duration-150" :class="{ 'text-white hover:text-primary' : !showBar, 'text-slate-800 hover:text-secondary': showBar }">Ancora
+                    Camping</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+                :class="{ 'text-white' : !showBar, 'text-slate-800': showBar }">
+                <a class="mr-5 font-semibold hover:cursor-pointer hover:text-secondary transition-colors duration-150"
+                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }" href="#about-houses">Kućice</a>
+                <a class="mr-5 font-semibold hover:cursor-pointer hover:text-secondary transition-colors duration-150"
+                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }" href="#about-camp">Kamp</a>
+                <a class="mr-5 font-semibold hover:cursor-pointer hover:text-secondary transition-colors duration-150"
+                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }" href="#gallery">Galerija</a>
+            </nav>
+        </div>
+
+        <!-- <div class="flex justify-center items-center h-full" :class="{ 'text-white' : !showBar }">
+            <div class="w-[450px] flex justify-between">
+                <div class="flex justify-between w-36 mr-3">
+                    <button
+                        class="transition duration-75 border-b-2 border-sky-800 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold"><a
+                            href="#header">Home</a></button>
+                    <button
+                        class="transition duration-75 hover:border-b-2 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold"><a
+                            href="#first">Pašman</a></button>
+                </div>
+                <div class="">
+                    <img x-show="!showBar" class="h-12" src="img/logo_white.png" alt="">
+                    <img x-show="showBar" class="h-12" src="img/logo.png" alt="">
+                </div>
+                <div class="flex justify-between w-36 ml-3">
+                    <button
+                        class="transition duration-75 hover:border-b-2 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold">Index</button>
+                    <button
+                        class="transition duration-75 hover:border-b-2 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold">Index</button>
+                </div>
+            </div>
+
+        </div> -->
+    </nav>
+    <div id="header" class="w-full h-screen shadow-lg">
+
+        <div class="w-full h-screen bg-[url('/img/galesnjak.jpg')] bg-cover bg-top">
+            <div
+                class="w-full h-screen bg-gradient-to-r from-black/[0.6] to-black/[0.01] flex justify-center items-center">
+                <div class="narrow-container">
+                    <h1 class="font-sans text-[9rem] font-bold text-white mb-4 drop-shadow-lg">Kamp Ancora</h1>
+                    <p class="font-sans text-white text-xl font-semibold mb-12">Vaša kuća za odmor u netaknutoj
+                        mediteranskoj prirodi, </br> uz čisto Jadransko more i infrastrukturu za ugodan odmor</p>
+                    <div>
+                        <button
+                            class="bg-secondary py-2 px-6 rounded-full font-sans text-white  drop-shadow-lg font-semibold"><a
+                                href="#about-houses">Saznajte više</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="bg-white w-full h-auto">
+        <div class="w-full flex flex-col justify-center items-center py-20">
+            <div class="narrow-container flex flex-col gap-10">
+                <div class="w-full">
+                    <div class="flex flex-col items-center">
+                        <span class="section-title">Jedinstvena ponuda</span>
+                        <span class="section-subtitle mt-2 max-w-[80%]">Kuća za odmor uz more i izvor dodatnog prihoda
+                            bez brige oko održavanja</span>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                        <div class="p-2 sm:w-1/2 w-full">
+                            <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span class="font-sans text-slate-600">Iskustvo vlastite nekretnine uz more</span>
+                            </div>
+                        </div>
+                        <div class="p-2 sm:w-1/2 w-full">
+                            <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span class="font-sans text-slate-600">Dodatni prihod od najma dok ne boravite u
+                                    kući</span>
+                            </div>
+                        </div>
+                        <div class="p-2 sm:w-1/2 w-full">
+                            <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span class="font-sans text-slate-600">Osigurano održavanje i čišćenje</span>
+                            </div>
+                        </div>
+                        <div class="p-2 sm:w-1/2 w-full">
+                            <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span class="font-sans text-slate-600">Mogućnost kupnje na leasing uz povoljne
+                                    uvjete</span>
+                            </div>
+                        </div>
+                        <div class="p-2 sm:w-1/2 w-full">
+                            <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span class="font-sans text-slate-600">Mogućnost korištenja svih sadržaja i usluga
+                                    kampa</span>
+                            </div>
+                        </div>
+                        <div class="p-2 sm:w-1/2 w-full">
+                            <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span class="font-sans text-slate-600">Pristup brojnim zanimljivim lokacijama i
+                                    aktivnostima u blizini</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto flex flex-col items-center pb-20 bg-white">
+        <div class="narrow-container flex flex-col lg:flex-row">
+            <div class="h-full min-h-[150px] w-full py-6 px-2 flex flex-row flex-grow gap-5">
+                <div>
+                    <div class="rounded-full h-12 w-12 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-chart-line text-white text-[20px]"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="section-title-style text-3xl mb-4">Investicija</h2>
+                    <p class="leading-relaxed light-text">
+                        Investirajte u modernu i vrhunski opremljenu kuću za odmor. Kamp Ancora ima sve potrebne dozvole
+                        i dokumentaciju tako da ne morate brinuti o tehničkim pitanjima. Nudimo i opciju kupnje na
+                        leasing po povoljnim uvjetima.
+                    </p>
+                </div>
+            </div>
+            <div class="divider divider-horizontal"></div>
+            <div class="h-full min-h-[150px] w-full py-6 px-2 flex flex-row flex-grow gap-5">
+                <div>
+                    <div class="rounded-full h-12 w-12 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-hand-holding-dollar text-white text-[20px]"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="section-title-style text-3xl mb-4">Iznajmljivanje</h2>
+                    <p class="leading-relaxed light-text">
+                        Ostvarite dodatni prihoda od iznajmljivanja kućice u vrijeme kad ne boravite u
+                        njoj. Kamp Ancora će se pobrinuti za sve potrebno za uspješno iznajmljivanje, kao što su
+                        oglašavanje, rezervacija, prijava, naplata, čišćenje i sl.
+                    </p>
+                </div>
+            </div>
+            <div class="divider divider-horizontal"></div>
+            <div class="h-full min-h-[150px] w-full py-6 px-2 flex flex-row flex-grow gap-5">
+                <div>
+                    <div class="rounded-full h-12 w-12 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-umbrella-beach text-white text-[20px]"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="section-title-style text-3xl mb-4">Odmor</h2>
+                    <p class="leading-relaxed light-text">
+                        Uživajte u odmoru u vlastitoj kućici kad god to vama odgovara. Mi ćemo se pobrinuti da vas
+                        kućica dočeka čista i spremna za odmor, a na raspolaganju ćete imati sve sadržaje i usluge
+                        kampa. Kamp Ancora nudi pristup brojnim zanimljivim lokacijama i aktivnostima u blizini, kao što
+                        su Zadar, Nacionalni park Kornati, biciklizam, ronjenje, ribolov i sl.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about-houses"
+        class="w-full h-[80vh] 3xl:h-[1000px] flex flex-row items-center justify-end bg-[url('/img/kamp1.jpg')] bg-cover bg-left relative">
+        <div class="absolute w-full h-full bg-gradient-to-l from-black/[0.7] to-black/[0.01]">
+
+        </div>
+        <div class="absolute h-full w-[45%] right-0 bg-primary z-50 opacity-50 wedge flex flex-row justify-end py-20">
+        </div>
+        <div class="h-full w-[43%] bg-secondary z-50 opacity-90 wedge flex flex-row justify-end py-32">
+            <div class="h-full w-[60%] pl-5 pr-12 flex flex-col items-center">
+                <div class="mb-10">
+                    <span class="section-title text-white">Moderne i vrhunski opremljene mobilne kućice</span>
+                </div>
+                <p class="text-white mt-3">Naša mobilna kućica je dovoljno velika za ugodan i udoban boravak 4 - 6
+                    osoba.
+                    Kreveti su komfornih veličina, te opskrbljeni madracima visoke kvalitete i
+                    pamučnom posteljinom.</p>
+                <p class="text-white mt-3">Velike staklene površine osiguravaju neometan pogled na predivnu prirodu, a
+                    staklena vrata povezuju unutarnji i vanjski dnevni boravak - terasu.</p>
+                <p class="text-white mt-3">Prostrana terasa predstavlja dodatnu, nekima i najvažniju prostoriju na
+                    odmoru.
+                    Sadrži prostor za jelo za 6 osoba i udobnu garnituru za sjedenje gdje možete uživati u zalascima
+                    sunca uz kavu ili koktele.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="w-full h-auto flex flex-col items-center py-20 bg-white">
+        <div class="narrow-container flex flex-col lg:flex-row gap-5">
+            <div
+                class="h-full bg-white rounded-xl min-h-[360px] w-full py-6 px-6 flex flex-col flex-grow border-slate-600 border-[1px]">
+                <div class="flex flex-row w-full mb-4">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-bed text-white text-[20px]"></i>
+                    </div>
+                    <h2 class="section-title-style md:min-h-[110px] text-3xl text-primary">Dvije udobne spavaće sobe
+                    </h2>
+                </div>
+                <div class="flex">
+                    <p class="leading-relaxed light-text">
+                        Svaka kućica nudi smještaj za 4 do 6 osoba u svoje dvije spavaće sobe i dnevnom boravku. Spavaće
+                        sobe opremljene su krevetima širine 160 i 90cm s madracima visoke kvalitete, te pamučnom
+                        posteljinom.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="h-full bg-white rounded-xl min-h-[360px] w-full py-6 px-6 flex flex-col flex-grow border-slate-600 border-[1px]">
+                <div class="flex flex-row w-full mb-4">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                        <span class="text-white font-bold">40&#13217;</span>
+                    </div>
+                    <h2 class="section-title-style md:min-h-[110px] text-3xl text-primary">Prostrana terasa s pogledom
+                        na more</h2>
+                </div>
+                <div class="flex">
+                    <p class="leading-relaxed light-text">
+                        Posebna pažnja posvećena je terasama s kojih se pruža pogled na more i opremljene su roštiljem
+                        i vanjskim tušem. Veličina od 30 do
+                        40&#13217; pruža dovoljno prostora za vanjsku blagavaonu za 6 osoba i
+                        garnituru za odmor uz kavu ili koktele. Nenatkriveni dio terase s ležaljkama svidjet će se
+                        ljubiteljima sunčanja.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="h-full bg-white rounded-xl min-h-[360px] w-full py-6 px-6 flex flex-col flex-grow border-slate-600 border-[1px]">
+                <div class="flex flex-row w-full mb-4">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-person-swimming text-white text-[20px]"></i>
+                    </div>
+                    <h2 class="section-title-style md:min-h-[110px] text-3xl text-primary">Privatni bazen<br>uz terasu
+                    </h2>
+                </div>
+                <div class="flex">
+                    <p class="leading-relaxed light-text">
+                        Osim zajedničkog bazena smještenog na plaži, dio kućica opremljen je privatnim bazenom pored
+                        terase. Bazen i terasa nude svoju privatnost i mir za ugodan odmor i opuštanje u večernjim
+                        satima.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="narrow-container flex flex-col lg:flex-row gap-5 mt-10">
+            <div
+                class="h-full bg-white rounded-xl min-h-[243px] w-full py-6 px-6 flex flex-col flex-grow border-slate-600 border-[1px]">
+                <div class="flex flex-row w-full mb-4">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-shower text-white text-[20px]"></i>
+                    </div>
+                    <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Dvije kupaonice</h2>
+                </div>
+                <div class="flex flex-col">
+                    <p class="leading-relaxed light-text">
+                        Uz dvije moderne kupaonice, čiste ručnike i higijenske potrepštine o kojima ne trebate brinuti,
+                        na raspolaganju je i vanjski tuš na terasi.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="h-full bg-white rounded-xl min-h-[243px] w-full py-6 px-6 flex flex-col flex-grow border-slate-600 border-[1px]">
+                <div class="flex flex-row w-full mb-4">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-kitchen-set text-white text-[20px]"></i>
+                    </div>
+                    <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Kuhinja i blagavaona</h2>
+                </div>
+                <div class="flex">
+                    <p class="leading-relaxed light-text">
+                        Kuhinja sadrži sve uređaje, posuđe za pripremu i serviranje jela.
+                        U slučaju hladnijeg vremena na raspolaganju je unutrašnja blagavaona.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="h-full bg-white rounded-xl min-h-[243px] w-full py-6 px-6 flex flex-col flex-grow border-slate-600 border-[1px]">
+                <div class="flex flex-row w-full mb-4">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                        <i class="fa-solid fa-couch text-white text-[20px]"></i>
+                    </div>
+                    <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Dnevni boravak</h2>
+                </div>
+                <div class="flex">
+                    <p class="leading-relaxed light-text">
+                        S udbonog trosjeda se kroz veliki stakleni zid pruža neometani pogled na prirodu i more, a TV na
+                        zidu može poslužiti za večernje druženje uz film.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gallery" class="flex flex-col items-center justify-center py-20 gap-10">
+        <span class="section-title">Galerija slika</span>
+        <section class="splide w-full">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img class="h-full" src="img/renders/terrace_1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="h-full" src="img/renders/house_1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="h-full" src="img/renders/camp_3.jpg">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="h-full" src="img/renders/pool_large.jpg">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- <div class="bg-white w-full h-screen">
+        <div class="w-full flex flex-col justify-center items-center py-20">
+            <div class="narrow-container flex flex-col gap-10 md:gap-0 md:flex-row">
+                <div class="w-full md:w-[50%] 2xl:w-[40%]">
+                    <div class="flex flex-col">
+                        <span class="section-title">Jedinstvena ponuda</span>
+                        <span class="section-subtitle mt-2 max-w-[80%]">Kuća za odmor uz more i izvor dodatnog prihoda
+                            bez brige oko održavanja</span>
+                        <p class="mt-10">
+                            U kampu možete osigurati svoju kućicu za odmor i izvor dodatnog prihoda od iznajmljivanja u vrijeme kad ne boravite u njoj.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-[50%] 2xl:w-[60%]">
+                    <img class="w-full object-cover rounded-2xl shadow-lg" src="img/kuca_bazen_1.jpeg">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div id="first">
+        <div class=" font-sans w-full h-screen bg-[url('/img/pasman-01.jpg')] bg-cover">
+            <div
+                class=" w-full h-screen bg-gradient-to-r from-black/[0.6] to-black/[0.01]  flex justify-between items-center ">
+                <div
+                    class="bg-sky-800/70 w-1/2 h-1/5 drop-shadow-lg text-white flex justify-center items-center p-5 pl-20">
+                    <p>Kamp Ancora smješten je na otoku Pašmanu, u mjestu Neviđane na samoj plaži, u okružju autohtonog
+                        mediteranskog raslinja. Izbor lokacije za kamp je potaknut idejom boravka u prirodi sa
+                        mogućnošću brzog pristupa okolnim sadržajima budući da je otok Pašman dobro povezan sa kopnom
+                        preko otoka Ugljana i neprekinutom trajektnom linijom sa Zadrom i u vrijeme izvan ljetne sezone.
+                        Relativno slaba naseljenost otoka pruža jedinstven doticaj s prirodom i mogućnosti istraživanja
+                        brojnih biciklističkih staza koje su posebno aktualne na proljeće i jesen.</p>
+                </div>
+                <div class="flex flex-col m-44 justify-between">
+                    <h1 class="font-sans text-9xl font-bold text-white">Pašman</h1>
+                    <p class=" font-sans text-white  text-xl drop-shadow-lg font-semibold mt-5">Otok za uživanje u
+                        prirodi i moru</p>
+                    <div>
+                        <button
+                            class="bg-sky-500 py-2 px-6  rounded-full font-sans text-white  drop-shadow-lg font-semibold mt-10"><a
+                                href="#first">Saznajte više</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>

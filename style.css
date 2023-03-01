@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@layer components {
+    .narrow-container {
+        @apply w-[92%] xl:w-[84%] 2xl:w-[70%];
+    }
+
+    .section-title-style {
+        @apply font-sans font-bold text-slate-800;
+    }
+
+    .section-subtitle-style {
+        @apply font-sans text-slate-500;
+    }
+
+    .section-title {
+        @apply font-sans text-6xl font-bold text-slate-800;
+    }
+
+    .section-subtitle {
+        @apply font-sans text-xl text-slate-500
+    }
+
+    .light-text {
+        @apply font-sans text-slate-500
+    }
+
+    .wedge {
+        clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
