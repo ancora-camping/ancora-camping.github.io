@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ancora camping</title>
+    <title>Camp Ancora</title>
     <link href="/dist/output.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -21,20 +21,27 @@
         :class="showBar ? 'bg-white h-20 shadow-lg' : 'bg-transparent h-28'"
         @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
         <div class="narrow-container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <a href="#header" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                 <img x-show="!showBar" class="h-12" src="img/logo_white.png" alt="">
                 <img x-show="showBar" class="h-12" src="img/logo.png" alt="">
-                <span class="ml-3 text-2xl hover:cursor-pointer transition-colors duration-150" :class="{ 'text-white hover:text-primary' : !showBar, 'text-slate-800 hover:text-secondary': showBar }">Ancora
+                <span class="ml-3 text-2xl hover:cursor-pointer transition-colors duration-150"
+                    :class="{ 'text-white hover:text-primary' : !showBar, 'text-slate-800 hover:text-secondary': showBar }">Ancora
                     Camping</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"
                 :class="{ 'text-white' : !showBar, 'text-slate-800': showBar }">
                 <a class="mr-5 font-semibold hover:cursor-pointer hover:text-secondary transition-colors duration-150"
-                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }" href="#about-houses">Kućice</a>
+                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }" href="#our-offer">O
+                    ponudi</a>
                 <a class="mr-5 font-semibold hover:cursor-pointer hover:text-secondary transition-colors duration-150"
-                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }" href="#about-camp">Kamp</a>
+                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }"
+                    href="#houses">Mobilne kućice</a>
                 <a class="mr-5 font-semibold hover:cursor-pointer hover:text-secondary transition-colors duration-150"
-                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }" href="#gallery">Galerija</a>
+                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }"
+                    href="#gallery">Galerija</a>
+                <a class="mr-5 font-semibold hover:cursor-pointer hover:text-secondary transition-colors duration-150"
+                    :class="{ 'hover:text-primary' : !showBar, 'hover:text-secondary': showBar }"
+                    href="#location">Lokacija</a>
             </nav>
         </div>
 
@@ -68,7 +75,8 @@
             <div
                 class="w-full h-screen bg-gradient-to-r from-black/[0.6] to-black/[0.01] flex justify-center items-center">
                 <div class="narrow-container">
-                    <h1 class="font-sans text-[9rem] font-bold text-white mb-4 drop-shadow-lg">Kamp Ancora</h1>
+                    <h1 class="font-sans text-7xl md:text-[9rem] font-bold text-white mb-4 drop-shadow-lg">Kamp Ancora
+                    </h1>
                     <p class="font-sans text-white text-xl font-semibold mb-12">Vaša kuća za odmor u netaknutoj
                         mediteranskoj prirodi, </br> uz čisto Jadransko more i infrastrukturu za ugodan odmor</p>
                     <div>
@@ -81,7 +89,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-white w-full h-auto">
+    <div id="our-offer" class="bg-white w-full h-auto">
         <div class="w-full flex flex-col justify-center items-center py-20">
             <div class="narrow-container flex flex-col gap-10">
                 <div class="w-full">
@@ -214,14 +222,15 @@
             </div>
         </div>
     </div>
-    <div id="about-houses"
-        class="w-full h-[80vh] 3xl:h-[1000px] flex flex-row items-center justify-end bg-[url('/img/kamp1.jpg')] bg-cover bg-left relative">
+    <div id="houses"
+        class="w-full h-[420px] md:h-[900px] 3xl:h-[900px] flex flex-row items-center justify-end bg-[url('/img/kamp1.jpg')] bg-cover bg-left relative">
         <div class="absolute w-full h-full bg-gradient-to-l from-black/[0.7] to-black/[0.01]">
 
         </div>
-        <div class="absolute h-full w-[45%] right-0 bg-primary z-50 opacity-50 wedge flex flex-row justify-end py-20">
+        <div
+            class="hidden absolute h-full w-[45%] right-0 bg-primary z-50 opacity-50 wedge md:flex flex-row justify-end py-20">
         </div>
-        <div class="h-full w-[43%] bg-secondary z-50 opacity-90 wedge flex flex-row justify-end py-32">
+        <div class="h-full hidden w-[43%] bg-secondary z-50 opacity-90 wedge md:flex flex-row justify-end py-32">
             <div class="h-full w-[60%] pl-5 pr-12 flex flex-col items-center">
                 <div class="mb-10">
                     <span class="section-title text-white">Moderne i vrhunski opremljene mobilne kućice</span>
@@ -237,6 +246,8 @@
                     Sadrži prostor za jelo za 6 osoba i udobnu garnituru za sjedenje gdje možete uživati u zalascima
                     sunca uz kavu ili koktele.</p>
             </div>
+        </div>
+        <div>
 
         </div>
     </div>
@@ -263,7 +274,7 @@
                 class="h-full bg-white rounded-xl min-h-[360px] w-full py-6 px-6 flex flex-col flex-grow border-slate-600 border-[1px]">
                 <div class="flex flex-row w-full mb-4">
                     <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
-                        <span class="text-white font-bold">40&#13217;</span>
+                        <span class="text-white font-bold text-sm">40&#13217;</span>
                     </div>
                     <h2 class="section-title-style md:min-h-[110px] text-3xl text-primary">Prostrana terasa s pogledom
                         na more</h2>
@@ -272,7 +283,7 @@
                     <p class="leading-relaxed light-text">
                         Posebna pažnja posvećena je terasama s kojih se pruža pogled na more i opremljene su roštiljem
                         i vanjskim tušem. Veličina od 30 do
-                        40&#13217; pruža dovoljno prostora za vanjsku blagavaonu za 6 osoba i
+                        40&#13217; pruža dovoljno prostora za vanjsku blagovaonu za 6 osoba i
                         garnituru za odmor uz kavu ili koktele. Nenatkriveni dio terase s ležaljkama svidjet će se
                         ljubiteljima sunčanja.
                     </p>
@@ -318,12 +329,12 @@
                     <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
                         <i class="fa-solid fa-kitchen-set text-white text-[20px]"></i>
                     </div>
-                    <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Kuhinja i blagavaona</h2>
+                    <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Kuhinja i blagovaona</h2>
                 </div>
                 <div class="flex">
                     <p class="leading-relaxed light-text">
                         Kuhinja sadrži sve uređaje, posuđe za pripremu i serviranje jela.
-                        U slučaju hladnijeg vremena na raspolaganju je unutrašnja blagavaona.
+                        U slučaju hladnijeg vremena na raspolaganju je unutrašnja blagovaona.
                     </p>
                 </div>
             </div>
@@ -344,7 +355,7 @@
             </div>
         </div>
     </div>
-    <div id="gallery" class="flex flex-col items-center justify-center py-20 gap-10">
+    <div id="gallery" class="flex flex-col items-center justify-center gap-10">
         <span class="section-title">Galerija slika</span>
         <section class="splide w-full">
             <div class="splide__track">
@@ -365,24 +376,78 @@
             </div>
         </section>
     </div>
-
-    <!-- <div class="bg-white w-full h-screen">
-        <div class="w-full flex flex-col justify-center items-center py-20">
+    <div id="location" class="bg-white w-full h-auto">
+        <div class="w-full flex flex-col justify-center items-center pt-20">
             <div class="narrow-container flex flex-col gap-10 md:gap-0 md:flex-row">
                 <div class="w-full md:w-[50%] 2xl:w-[40%]">
                     <div class="flex flex-col">
-                        <span class="section-title">Jedinstvena ponuda</span>
-                        <span class="section-subtitle mt-2 max-w-[80%]">Kuća za odmor uz more i izvor dodatnog prihoda
-                            bez brige oko održavanja</span>
-                        <p class="mt-10">
-                            U kampu možete osigurati svoju kućicu za odmor i izvor dodatnog prihoda od iznajmljivanja u vrijeme kad ne boravite u njoj.
+                        <span class="section-title">Savršena lokacija za odmor</span>
+                        <span class="section-subtitle mt-2 max-w-[80%] text-secondary">Boravak u prirodi nadohvat
+                            ruke</span>
+                        <p class="leading-relaxed light-text mt-10">
+                            Kamp Ancora je smješten na otoku Pašmanu, u mjestu Neviđane na samoj plaži, u okružju
+                            autohtonog mediteranskog raslinja. Izbor lokacije za kamp je potaknut idejom boravka u
+                            prirodi sa mogućnošću brzog pristupa okolnim sadržajima budući da je otok Pašman dobro
+                            povezan sa kopnom preko otoka Ugljana i neprekinutom trajektnom linijom sa Zadrom i u
+                            vrijeme izvan ljetne sezone. Relativno slaba naseljenost otoka pruža jedinstven doticaj s
+                            prirodom i mogućnosti istraživanja brojnih biciklističkih staza koje su posebno aktualne na
+                            proljeće i jesen.
                         </p>
                     </div>
                 </div>
-                <div class="w-full md:w-[50%] 2xl:w-[60%]">
-                    <img class="w-full object-cover rounded-2xl shadow-lg" src="img/kuca_bazen_1.jpeg">
+                <div class="w-full md:w-[50%] 2xl:w-[60%] px-10">
+                    <img class="w-full object-cover rounded-2xl" src="img/croatia_map4.png">
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="bg-white w-full h-auto">
+        <div class="w-full flex flex-col justify-center items-center py-20">
+            <div class="narrow-container flex flex-col gap-10 md:gap-0 md:flex-row">
+                <div class="w-full md:w-[50%] 2xl:w-[60%] flex items-center">
+                    <img class="w-full object-cover rounded-2xl" src="img/renders/top_view.jpg">
+                </div>
+                <div class="w-full md:w-[50%] 2xl:w-[40%] pl-10">
+                    <div class="flex flex-col">
+                        <span class="section-title">Pažljivo osmišljen dizajn</span>
+                        <span class="section-subtitle mt-2 max-w-[80%] text-secondary">Pogled na more sa svake
+                            terase</span>
+                        <p class="leading-relaxed light-text mt-10">
+                            Dizajnirali smo kamp tako da svaka kućica ima osiguran pogled na more.
+                            Kamp se nalazi na šljunčanoj plaži s koje se pruža pogled na naselja na kopnu koja okružuju
+                            Zadar, što je ujedno područje poznato po izrazito povoljnim vremenskim prilikama tijekom
+                            cijele godine.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="about-camp"
+        class="w-full h-[420px] md:h-[900px] 3xl:h-[900px] flex flex-row items-center justify-start bg-[url('/img/pasman.jpg')] bg-cover bg-right relative">
+        <div class="absolute w-full h-full bg-gradient-to-l from-black/[0.7] to-black/[0.01]">
+
+        </div>
+        <div
+            class="hidden absolute h-full w-[45%] left-0 bg-primary z-50 opacity-50 wedge-left md:flex flex-row justify-start py-20">
+        </div>
+        <div class="h-full hidden w-[43%] bg-secondary z-50 opacity-90 wedge-left md:flex flex-row justify-start py-32">
+            <div class="h-full w-[60%] pl-5 pr-12 flex flex-col items-center">
+                <div class="mb-10">
+                    <span class="section-title text-white">Savršena lokacija za odmor</span>
+                </div>
+                <p class="text-white mt-3">Kamp Ancora je smješten na otoku Pašmanu, u mjestu Neviđane na samoj plaži, u
+                    okružju
+                    autohtonog mediteranskog raslinja. Izbor lokacije za kamp je potaknut idejom boravka u
+                    prirodi sa mogućnošću brzog pristupa okolnim sadržajima budući da je otok Pašman dobro
+                    povezan sa kopnom preko otoka Ugljana i neprekinutom trajektnom linijom sa Zadrom i u
+                    vrijeme izvan ljetne sezone. Relativno slaba naseljenost otoka pruža jedinstven doticaj s
+                    prirodom i mogućnosti istraživanja brojnih biciklističkih staza koje su posebno aktualne na
+                    proljeće i jesen.</p>
+            </div>
+        </div>
+        <div>
+
         </div>
     </div> -->
     <!-- <div id="first">
@@ -412,6 +477,27 @@
             </div>
         </div>
     </div> -->
+    <footer class="w-full flex flex-col justify-center items-center bg-primary py-5">
+        <div class="narrow-container flex flex-row justify-between">
+            <div class="flex flex-row items-center">
+                <img class="h-8" src="img/logo_white.png" alt="">
+                <span class="ml-3 text-white text-lg">Ancora
+                    Camping</span>
+                <p class="text-sm text-gray-300 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
+                    2023 Ankora Consulting d.o.o.
+
+                </p>
+            </div>
+            <div class="flex flex-row items-center">
+                <a href="mailto:info@ancora-camping.com" class="text-gray-300 ml-1" rel="noopener noreferrer"
+                    target="_blank">
+                    <i class="fa-solid fa-envelope text-white mr-1"></i>
+                    info@ancora-camping.com
+                </a>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>
