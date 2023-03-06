@@ -2167,10 +2167,6 @@ html {
   margin-right: 0.25rem;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
 .mr-4 {
   margin-right: 1rem;
 }
@@ -2477,8 +2473,8 @@ html {
   --tw-bg-opacity: 0.8;
 }
 
-.bg-\[url\(\'\/img\/galesnjak\.jpg\'\)\] {
-  background-image: url('/img/galesnjak.jpg');
+.bg-\[url\(\'\/img\/banner\.jpg\'\)\] {
+  background-image: url('/img/banner.jpg');
 }
 
 .bg-\[url\(\'\/img\/kamp1\.jpg\'\)\] {
@@ -2501,24 +2497,8 @@ html {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
-.bg-\[url\(\'\/img\/header\.jpeg\'\)\] {
-  background-image: url('/img/header.jpeg');
-}
-
-.bg-\[url\(\'\/img\/iStock-589582482copy\.jpeg\'\)\] {
-  background-image: url('/img/iStock-589582482copy.jpeg');
-}
-
-.bg-\[url\(\'\/img\/banner\.heic\'\)\] {
-  background-image: url('/img/banner.heic');
-}
-
-.bg-\[url\(\'\/img\/banner\.jpeg\'\)\] {
-  background-image: url('/img/banner.jpeg');
-}
-
-.bg-\[url\(\'\/img\/banner\.jpg\'\)\] {
-  background-image: url('/img/banner.jpg');
+.bg-\[url\(\'\/img\/galesnjak\.jpg\'\)\] {
+  background-image: url('/img/galesnjak.jpg');
 }
 
 .from-black\/\[0\.6\] {
@@ -2551,14 +2531,6 @@ html {
 
 .bg-top {
   background-position: top;
-}
-
-.bg-bottom {
-  background-position: bottom;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .object-contain {
