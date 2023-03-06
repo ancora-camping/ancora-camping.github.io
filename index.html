@@ -25,51 +25,32 @@
                 <img x-show="!showBar" class="h-12" src="img/logo_white.png" alt="">
                 <img x-show="showBar" class="h-12" src="img/logo.png" alt="">
                 <span class="ml-3 text-2xl hover:cursor-pointer transition-colors duration-150"
-                    :class="{ 'text-white hover:text-primary' : !showBar, 'text-slate-800 hover:text-secondary': showBar }">Ancora
+                    :class="{ 'text-white hover:text-primary' : !showBar, 'text-slate-800 hover:text-secondary-900': showBar }">Ancora
                     Camping</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"
                 :class="{ 'text-white' : !showBar, 'text-slate-800': showBar }">
-                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary transition-colors duration-150"
-                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary': showBar }" href="#our-offer">O
+                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary-900 transition-colors duration-150"
+                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary-900': showBar }"
+                    href="#our-offer">O
                     ponudi</a>
-                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary transition-colors duration-150"
-                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary': showBar }" href="#houses">Mobilne
+                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary-900 transition-colors duration-150"
+                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary-900': showBar }"
+                    href="#houses">Mobilne
                     kućice</a>
-                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary transition-colors duration-150"
-                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary': showBar }"
+                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary-900 transition-colors duration-150"
+                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary-900': showBar }"
                     href="#gallery">Galerija</a>
-                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary transition-colors duration-150"
-                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary': showBar }"
+                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary-900 transition-colors duration-150"
+                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary-900': showBar }"
                     href="#location">Lokacija</a>
+                <a class="mr-5 font-semibold hover:cursor-pointer md:hover:text-secondary-900 transition-colors duration-150"
+                    :class="{ 'md:hover:text-primary' : !showBar, 'md:hover:text-secondary-900': showBar }"
+                    href="#contact">Kontakt</a>
             </nav>
         </div>
-
-        <!-- <div class="flex justify-center items-center h-full" :class="{ 'text-white' : !showBar }">
-            <div class="w-[450px] flex justify-between">
-                <div class="flex justify-between w-36 mr-3">
-                    <button
-                        class="transition duration-75 border-b-2 border-sky-800 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold"><a
-                            href="#header">Home</a></button>
-                    <button
-                        class="transition duration-75 hover:border-b-2 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold"><a
-                            href="#first">Pašman</a></button>
-                </div>
-                <div class="">
-                    <img x-show="!showBar" class="h-12" src="img/logo_white.png" alt="">
-                    <img x-show="showBar" class="h-12" src="img/logo.png" alt="">
-                </div>
-                <div class="flex justify-between w-36 ml-3">
-                    <button
-                        class="transition duration-75 hover:border-b-2 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold">Index</button>
-                    <button
-                        class="transition duration-75 hover:border-b-2 hover:border-sky-500 hover:scale-[1.05] hover:text-sky-500 hover:font-semibold">Index</button>
-                </div>
-            </div>
-
-        </div> -->
     </nav>
-    <div id="header" class="w-full h-screen shadow-lg">
+    <div id="header" class="w-full h-screen h-[100svh] shadow-lg">
 
         <div class="w-full h-screen bg-[url('/img/galesnjak.jpg')] bg-cover bg-top">
             <div
@@ -81,7 +62,7 @@
                         mediteranskoj prirodi, </br> uz čisto Jadransko more i infrastrukturu za ugodan odmor</p>
                     <div>
                         <button
-                            class="bg-secondary py-2 px-6 rounded-full font-sans text-white  drop-shadow-lg font-semibold"><a
+                            class="bg-secondary-1000 hover:bg-secondary-900 transition-all py-2 px-6 rounded-full font-sans text-white drop-shadow-md hover:drop-shadow-lg font-semibold"><a
                                 href="#about-houses">Saznajte više</a></button>
                     </div>
                 </div>
@@ -104,7 +85,8 @@
                         <div class="p-2 sm:w-1/2 w-full">
                             <div class="bg-gray-100 rounded flex p-4 h-full items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    stroke-width="3" class="text-accent-900 w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24">
                                     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                     <path d="M22 4L12 14.01l-3-3"></path>
                                 </svg>
@@ -114,7 +96,8 @@
                         <div class="p-2 sm:w-1/2 w-full">
                             <div class="bg-gray-100 rounded flex p-4 h-full items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    stroke-width="3" class="text-accent-900 w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24">
                                     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                     <path d="M22 4L12 14.01l-3-3"></path>
                                 </svg>
@@ -125,7 +108,8 @@
                         <div class="p-2 sm:w-1/2 w-full">
                             <div class="bg-gray-100 rounded flex p-4 h-full items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    stroke-width="3" class="text-accent-900 w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24">
                                     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                     <path d="M22 4L12 14.01l-3-3"></path>
                                 </svg>
@@ -135,7 +119,8 @@
                         <div class="p-2 sm:w-1/2 w-full">
                             <div class="bg-gray-100 rounded flex p-4 h-full items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    stroke-width="3" class="text-accent-900 w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24">
                                     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                     <path d="M22 4L12 14.01l-3-3"></path>
                                 </svg>
@@ -146,7 +131,8 @@
                         <div class="p-2 sm:w-1/2 w-full">
                             <div class="bg-gray-100 rounded flex p-4 h-full items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    stroke-width="3" class="text-accent-900 w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24">
                                     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                     <path d="M22 4L12 14.01l-3-3"></path>
                                 </svg>
@@ -157,7 +143,8 @@
                         <div class="p-2 sm:w-1/2 w-full">
                             <div class="bg-gray-100 rounded flex p-4 h-full items-center">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="3" class="text-accent w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                                    stroke-width="3" class="text-accent-900 w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24">
                                     <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                                     <path d="M22 4L12 14.01l-3-3"></path>
                                 </svg>
@@ -174,7 +161,7 @@
         <div class="narrow-container flex flex-col lg:flex-row">
             <div class="h-full min-h-[150px] w-full py-6 px-2 flex flex-row flex-grow gap-5">
                 <div>
-                    <div class="rounded-full h-12 w-12 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-chart-line text-white text-[20px]"></i>
                     </div>
                 </div>
@@ -190,7 +177,7 @@
             <div class="divider divider-horizontal"></div>
             <div class="h-full min-h-[150px] w-full py-6 px-2 flex flex-row flex-grow gap-5">
                 <div>
-                    <div class="rounded-full h-12 w-12 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-hand-holding-dollar text-white text-[20px]"></i>
                     </div>
                 </div>
@@ -206,7 +193,7 @@
             <div class="divider divider-horizontal"></div>
             <div class="h-full min-h-[150px] w-full py-6 px-2 flex flex-row flex-grow gap-5">
                 <div>
-                    <div class="rounded-full h-12 w-12 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-umbrella-beach text-white text-[20px]"></i>
                     </div>
                 </div>
@@ -230,7 +217,8 @@
         <div
             class="hidden absolute h-full w-[52%] xl:w-[50%] 2xl:w-[45%] right-0 bg-primary z-50 opacity-50 wedge lg:flex flex-row justify-end py-20">
         </div>
-        <div class="h-full hidden w-[50%] xl:w-[48%] 2xl:w-[43%] bg-secondary z-50 opacity-90 wedge lg:flex flex-row justify-end py-20 xl:py-32">
+        <div
+            class="h-full hidden w-[50%] xl:w-[48%] 2xl:w-[43%] bg-secondary-900 z-50 opacity-90 wedge lg:flex flex-row justify-end py-20 xl:py-32">
             <div class="h-full w-[60%] pl-2 xl:pl-5 pr-5 xl:pr-12 flex flex-col items-center">
                 <div class="mb-10">
                     <span class="section-title text-white">Moderne i vrhunski opremljene mobilne kućice</span>
@@ -249,7 +237,8 @@
         </div>
         <div class="lg:hidden self-end flex justify-center">
             <div class="narrow-container py-2 md:py-10">
-                <span class="section-title text-5xl md:text-6xl text-white drop-shadow-md z-50">Moderne i vrhunski opremljene mobilne
+                <span class="section-title text-5xl md:text-6xl text-white drop-shadow-md z-50">Moderne i vrhunski
+                    opremljene mobilne
                     kućice</span>
             </div>
         </div>
@@ -274,7 +263,7 @@
             <div
                 class="h-full bg-white rounded-xl min-h-[360px] w-full py-6 px-6 flex flex-col flex-grow border-slate-300 border-[1px]">
                 <div class="flex flex-row w-full mb-4">
-                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-bed text-white text-[20px]"></i>
                     </div>
                     <h2 class="section-title-style md:min-h-[110px] text-3xl text-primary">Dvije udobne spavaće sobe
@@ -291,7 +280,7 @@
             <div
                 class="h-full bg-white rounded-xl min-h-[360px] w-full py-6 px-6 flex flex-col flex-grow border-slate-300 border-[1px]">
                 <div class="flex flex-row w-full mb-4">
-                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent-900 flex justify-center items-center">
                         <span class="text-white font-bold text-sm">40&#13217;</span>
                     </div>
                     <h2 class="section-title-style md:min-h-[110px] text-3xl text-primary">Prostrana terasa s pogledom
@@ -310,7 +299,7 @@
             <div
                 class="h-full bg-white rounded-xl min-h-[360px] w-full py-6 px-6 flex flex-col flex-grow border-slate-300 border-[1px]">
                 <div class="flex flex-row w-full mb-4">
-                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-person-swimming text-white text-[20px]"></i>
                     </div>
                     <h2 class="section-title-style md:min-h-[110px] text-3xl text-primary">Privatni bazen<br>uz terasu
@@ -327,7 +316,7 @@
             <div
                 class="h-full bg-white rounded-xl min-h-[243px] w-full py-6 px-6 flex flex-col flex-grow border-slate-300 border-[1px]">
                 <div class="flex flex-row w-full mb-4">
-                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-shower text-white text-[20px]"></i>
                     </div>
                     <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Dvije kupaonice</h2>
@@ -342,7 +331,7 @@
             <div
                 class="h-full bg-white rounded-xl min-h-[243px] w-full py-6 px-6 flex flex-col flex-grow border-slate-300 border-[1px]">
                 <div class="flex flex-row w-full mb-4">
-                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-kitchen-set text-white text-[20px]"></i>
                     </div>
                     <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Kuhinja i blagovaona</h2>
@@ -357,7 +346,7 @@
             <div
                 class="h-full bg-white rounded-xl min-h-[243px] w-full py-6 px-6 flex flex-col flex-grow border-slate-300 border-[1px]">
                 <div class="flex flex-row w-full mb-4">
-                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent flex justify-center items-center">
+                    <div class="rounded-full h-12 w-12 shrink-0 mr-6 bg-accent-900 flex justify-center items-center">
                         <i class="fa-solid fa-couch text-white text-[20px]"></i>
                     </div>
                     <h2 class="section-title-style md:min-h-[72px] text-3xl text-primary">Dnevni boravak</h2>
@@ -398,7 +387,7 @@
                 <div class="w-full lg:w-[50%] 2xl:w-[40%]">
                     <div class="flex flex-col">
                         <span class="section-title">Savršena lokacija za odmor</span>
-                        <span class="section-subtitle mt-2 max-w-[80%] text-secondary">Boravak u prirodi nadohvat
+                        <span class="section-subtitle mt-2 max-w-[80%] text-secondary-900">Boravak u prirodi nadohvat
                             ruke</span>
                         <p class="leading-relaxed light-text mt-10">
                             Kamp Ancora je smješten na otoku Pašmanu, u mjestu Neviđane na samoj plaži, u okružju
@@ -426,7 +415,7 @@
                 <div class="w-full lg:w-[50%] 2xl:w-[40%] lg:pl-10 order-first lg:order-last">
                     <div class="flex flex-col">
                         <span class="section-title">Pažljivo osmišljen dizajn</span>
-                        <span class="section-subtitle mt-2 max-w-[80%] text-secondary">Pogled na more sa svake
+                        <span class="section-subtitle mt-2 max-w-[80%] text-secondary-900">Pogled na more sa svake
                             terase</span>
                         <p class="leading-relaxed light-text mt-10">
                             Dizajnirali smo kamp tako da svaka kućica ima osiguran pogled na more.
@@ -447,7 +436,7 @@
         <div
             class="hidden absolute h-full w-[45%] left-0 bg-primary z-50 opacity-50 wedge-left md:flex flex-row justify-start py-20">
         </div>
-        <div class="h-full hidden w-[43%] bg-secondary z-50 opacity-90 wedge-left md:flex flex-row justify-start py-32">
+        <div class="h-full hidden w-[43%] bg-secondary-900 z-50 opacity-90 wedge-left md:flex flex-row justify-start py-32">
             <div class="h-full w-[60%] pl-5 pr-12 flex flex-col items-center">
                 <div class="mb-10">
                     <span class="section-title text-white">Savršena lokacija za odmor</span>
@@ -493,23 +482,80 @@
             </div>
         </div>
     </div> -->
-    <footer class="w-full flex flex-col justify-center items-center bg-primary py-5">
-        <div class="narrow-container flex flex-row justify-between">
+    <footer id="contact" class="w-full flex flex-col justify-center items-center bg-primary py-5">
+        <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 narrow-container py-5 lg:py-10">
+            <div class="flex flex-col w-full lg:w-1/2">
+                <div class="flex flex-col ">
+                    <span class="section-title text-white">
+                        Kontaktirajte nas
+                    </span>
+                    <span class="section-subtitle-style text-lg text-white mt-1">
+                        Tu smo da odgovorimo na sva vaša pitanja
+                    </span>
+                </div>
+                <div class="flex flex-col gap-2 mt-10">
+                    <a href="mailto:info@ancora-camping.com" class="text-gray-300 ml-1" rel="noopener noreferrer"
+                        target="_blank">
+                        <i class="fa-solid fa-envelope text-white text-lg mr-1"></i>
+                        info@ancora-camping.com
+                    </a>
+                    <a href="tel:+385989456078" class="text-gray-300 ml-1" rel="noopener noreferrer" target="_blank">
+                        <i class="fa-solid fa-phone text-white text-lg mr-1"></i>
+                        +385 98 9456 078
+                    </a>
+                    <a href="https://wa.me/385989456078" class="text-gray-300 ml-1" rel="noopener noreferrer"
+                        target="_blank">
+                        <i class="fa-brands fa-whatsapp text-white text-xl mr-1"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col">
+                <form action="https://fabform.io/f/UW3ylgt" method="post">
+                    <div class="">
+                        <div class="flex flex-wrap">
+                            <div class="p-2 w-full lg:w-1/2">
+                                <div class="relative">
+                                    <label for="name" class="leading-7 text-md font-bold text-white">Ime</label>
+                                    <input type="text" id="name" name="name"
+                                        class="w-full bg-white bg-opacity-80 rounded border border-gray-300 focus:border-primary focus:bg-white focus:ring-2 focus:ring-secondary-900 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                            </div>
+                            <div class="p-2 w-full lg:w-1/2">
+                                <div class="relative">
+                                    <label for="email" class="leading-7 text-md font-bold text-white">E-mail</label>
+                                    <input type="email" id="email" name="email"
+                                        class="w-full bg-white bg-opacity-80 rounded border border-gray-300 focus:border-primary focus:bg-white focus:ring-2 focus:ring-secondary-900 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                            </div>
+                            <div class="p-2 w-full">
+                                <div class="relative">
+                                    <label for="message" class="leading-7 text-md font-bold text-white">Poruka</label>
+                                    <textarea id="message" name="message"
+                                        class="w-full bg-white bg-opacity-80 rounded border border-gray-300 focus:border-primary focus:bg-white focus:ring-2 focus:ring-secondary-900 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                                </div>
+                            </div>
+                            <div class="p-2 w-full">
+                                <button type="submit"
+                                    class="bg-accent-1000 hover:bg-accent-900 py-2 px-10 rounded-full font-sans text-white  drop-shadow-md hover:drop-shadow-lg font-semibold transition-all duration-150"><a
+                                        href="#about-houses">Pošalji</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="narrow-container flex flex-row justify-center">
             <div class="flex flex-row items-center">
                 <img class="h-8" src="img/logo_white.png" alt="">
-                <span class="ml-3 text-white text-lg">Ancora
+                <span class="ml-3 text-slate-400 text-lg">Ancora
                     Camping</span>
-                <p class="text-sm text-gray-300 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
-                    2023 Ankora Camping
-
+                <p
+                    class="text-sm text-slate-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-slate-400 sm:py-2 sm:mt-0 mt-4">
+                    ©
+                    2023 Ancora Camping
                 </p>
-            </div>
-            <div class="flex flex-row items-center">
-                <a href="mailto:info@ancora-camping.com" class="text-gray-300 ml-1" rel="noopener noreferrer"
-                    target="_blank">
-                    <i class="fa-solid fa-envelope text-white mr-1"></i>
-                    info@ancora-camping.com
-                </a>
             </div>
         </div>
 
